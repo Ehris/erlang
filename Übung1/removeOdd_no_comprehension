@@ -1,0 +1,7 @@
+-module(removeOdd).
+-export([remOdd/1]).
+
+remOdd(List)->remOdd(List,[]).
+remOdd([H|T],New_List) when H rem 2==0 -> remOdd(T,[H|New_List]);
+remOdd([H|T],New_List) when H rem 2 == 1 -> remOdd(T,New_List);
+remOdd([],New_List) -> New_List. 
